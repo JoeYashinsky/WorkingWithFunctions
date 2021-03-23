@@ -1,5 +1,6 @@
 'use strict';
 
+/*
 const bookings = [];
 
 const createBooking = function(
@@ -33,3 +34,16 @@ createBooking('LH123', 2) // {flightNumber: "LH123", #ofPass: 2, price: 398}
 createBooking('LH123', 5) // {flightNumber: "LH123", #ofPass: 5, price: 995}
 
 createBooking('LH123', undefined, 1000); //{flight#: "LH123", #ofPass: 1, price: 1000}
+*/
+
+const flight = 'LH234';
+const joe = {
+    name: 'Joe Tinker', 
+    passport: 234432
+}
+
+const checkIn = function(flightNumber, passenger) {
+
+}
+
+checkIn(flight, joe);
