@@ -3,7 +3,7 @@
 const bookings = [];
 
 const createBooking = function(flightNumber, numberOfPassengers, price) {
-
+    numberOfPassengers = numberOfPassengers || 1;
     const booking = {
         flightNumber,
         numberOfPassengers,
@@ -14,3 +14,4 @@ const createBooking = function(flightNumber, numberOfPassengers, price) {
 }
 
 createBooking('LH123');
+//{flightNumber: "LH123", numberOfPassengers: undefined, price: undefined}
