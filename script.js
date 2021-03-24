@@ -91,3 +91,8 @@ transformer('JavaScript is the best!', oneWord);
 //Original string: JavaScript is the best!
 //Transformed string: javascriptisthebest!
 //Transformed by: oneWord
+
+const high5 = function() {
+    console.log('🤚');
+}
+document.body.addEventListener('click', high5);
