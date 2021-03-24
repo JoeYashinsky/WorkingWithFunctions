@@ -38,19 +38,21 @@ createBooking('LH123', undefined, 1000); //{flight#: "LH123", #ofPass: 1, price:
 
 const flight = 'LH234';
 const joe = {
-    name: 'Joe Tinker', 
-    passport: 234432
-}
+  name: 'Joe Tinker',
+  passport: 234432,
+};
 
-const checkIn = function(flightNumber, passenger) {
-    flightNumber = 'LH999';
-    passenger.name = 'Mr. ' + passenger.name;
+const checkIn = function (flightNumber, passenger) {
+  flightNumber = 'LH999';
+  passenger.name = 'Mr. ' + passenger.name;
 
-    if(passenger.passport === 234432) {
-        alert('Check in ')
-    } else {
-        alert('Wrong passport!')
-    }
-}
+  if (passenger.passport === 234432) {
+    alert('Checked in ');
+  } else {
+    alert('Wrong passport!');
+  }
+};
 
 checkIn(flight, joe);
+console.log(flight);  //  LH234
+console.log(joe);  //  {name: "Mr. Joe Tinker", passport: 234432}
