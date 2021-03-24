@@ -77,7 +77,13 @@ const upperFirstWord = function(str) {
 
 // Higher-order function
 const transformer = function(str, fn) {
+    console.log(`Original string: ${str}`);
+    //Original string: JavaScript is the best!
+    console.log(`Transformed string: ${fn(str)}`)
+    //Transformed string: JAVASCRIPT is the best!
 
+    console.log(`Transformed by: ${fn.name}`);
+    // Transformed by: upperFirstWord
 }
 
 transformer('JavaScript is the best!', upperFirstWord);
