@@ -53,6 +53,13 @@ const checkIn = function (flightNumber, passenger) {
   }
 };
 
-checkIn(flight, joe);
-console.log(flight);  //  LH234
-console.log(joe);  //  {name: "Mr. Joe Tinker", passport: 234432}
+checkIn(flight, joe);    //  Checked in
+console.log(flight); //  LH234
+console.log(joe); //  {name: "Mr. Joe Tinker", passport: 234432}
+
+const newPassport = function (person) {
+  person.passport = Math.trunc(Math.random() * 100000);
+};
+
+newPassport(joe);
+checkIn(flight, joe);  //  Wrong passport! Since the # was just altered
