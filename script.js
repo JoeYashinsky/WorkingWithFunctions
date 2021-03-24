@@ -36,6 +36,7 @@ createBooking('LH123', 5) // {flightNumber: "LH123", #ofPass: 5, price: 995}
 createBooking('LH123', undefined, 1000); //{flight#: "LH123", #ofPass: 1, price: 1000}
 */
 
+/*
 const flight = 'LH234';
 const joe = {
   name: 'Joe Tinker',
@@ -63,3 +64,13 @@ const newPassport = function (person) {
 
 newPassport(joe);
 checkIn(flight, joe);  //  Wrong passport! Since the # was just altered
+*/
+
+const oneWord = function(str) {
+    return str.replace(/ /g, '').toLowerCase();
+}
+
+const upperFirstWord = function(str) {
+    const [first, ...others] = str.split(' ');
+    return [first.toUpperCase(), ...others].join(' ');
+}
