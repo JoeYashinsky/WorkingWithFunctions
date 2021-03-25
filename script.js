@@ -170,4 +170,9 @@ console.log(swiss);
 // Apply method
 const flightData = [583, 'George Cooper'];
 book.apply(swiss, flightData)
+// George Cooper booked a seat on Swiss Airlines flight LX583
 console.log(swiss);
+// {airline: "Swiss Airlines", iataCode: "LX", bookings: Array(2)}
+
+book.call(swiss, ...flightData);
+// George Cooper booked a seat on Swiss Airlines flight LX583
