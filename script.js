@@ -113,3 +113,5 @@ greeting('Hello')('Ricky');  //  Hello, Ricky.
 
 const greetArrowFunc = greetingMessage => name => console.log(`${greetingMessage} ${name}`);
 
+greetArrowFunc('Welcome,') ('Cooper.'); // Welcome, Cooper.
+
