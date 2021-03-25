@@ -167,3 +167,7 @@ book.call(swiss, 583, 'Mary Cooper');
 console.log(swiss);
 //{airline: "Swiss Airlines", iataCode: "LX", bookings: Array(1)}
 
+// Apply method
+const flightData = [583, 'George Cooper'];
+book.apply(swiss, flightData)
+console.log(swiss);
