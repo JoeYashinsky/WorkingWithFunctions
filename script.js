@@ -97,4 +97,19 @@ const high5 = function() {
 }
 document.body.addEventListener('click', high5);
 
-['Jonas', 'Martha', 'Adam'].forEach(high5);
+['Jonas', 'Martha', 'Adam'].forEach(high5);   // 3 🤚
+
+const greeting = function(greetingMessage) {
+    return function(name) {
+        console.log(`${greetingMessage}, ${name}.`);
+    }
+}
+
+const greeterHeyThere = greeting('Hey there');
+greeterHeyThere('Bob');  //  Hey there, Bob.
+greeterHeyThere('Jack');  //  Hey there, Jack.
+
+greeting('Hello')('Ricky');  //  Hello, Ricky.
+
+const greetArrowFunc = greetingMessage => name => console.log(`${greetingMessage} ${name}`);
+
