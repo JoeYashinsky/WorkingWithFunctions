@@ -146,4 +146,13 @@ const book = delta.book;
 // This does not work
 //book(23, 'Jack Taylor');
 
-book.call()
+book.call(deltawings, 23, 'Jack Taylor'); 
+// Jack Taylor booked a seat on undefined flight DW23
+console.log(deltawings);
+//{name: "Deltawings", iataCode:"DW", bookings: Array(1)}
+
+book.call(delta, 239, 'Mary Cooper');
+//Mary Cooper booked a seat on Delta flight DEL239
+console.log(delta);
+// {airline: "Delta", iataCode: "DEL", bookings: Array(3), book: f}
+
