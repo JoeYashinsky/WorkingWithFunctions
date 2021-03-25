@@ -136,7 +136,7 @@ console.log(delta); // displays 'delta' object, including 'bookings' array with 
 // 1: {flight: "DEL635", passengerName: "Mike Smith"}
 
 const deltawings = {
-    name: 'Deltawings',
+    airline: 'Deltawings',
     iataCode: 'DW',
     bookings: [],
 };
@@ -147,12 +147,23 @@ const book = delta.book;
 //book(23, 'Jack Taylor');
 
 book.call(deltawings, 23, 'Jack Taylor'); 
-// Jack Taylor booked a seat on undefined flight DW23
+// Jack Taylor booked a seat on Deltawings flight DW23
 console.log(deltawings);
-//{name: "Deltawings", iataCode:"DW", bookings: Array(1)}
+//{airline: "Deltawings", iataCode:"DW", bookings: Array(1)}
 
 book.call(delta, 239, 'Mary Cooper');
 //Mary Cooper booked a seat on Delta flight DEL239
 console.log(delta);
 // {airline: "Delta", iataCode: "DEL", bookings: Array(3), book: f}
+
+const swiss = {
+    airline: 'Swiss Airlines',
+    iataCode: 'LX',
+    bookings: []
+}
+
+book.call(swiss, 583, 'Mary Cooper');
+// Mary Cooper booked a seat on Swiss Airlines flight LX583
+console.log(swiss);
+//{airline: "Swiss Airlines", iataCode: "LX", bookings: Array(1)}
 
