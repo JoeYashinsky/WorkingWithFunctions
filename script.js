@@ -143,3 +143,7 @@ const deltawings = {
 
 const book = delta.book;
 
+// This does not work
+//book(23, 'Jack Taylor');
+
+book.call()
