@@ -123,6 +123,7 @@ const delta = {
     bookings: [],
     book(flightNumber, passengerName) {
         console.log(`${passengerName} booked a seat on ${this.airline} flight ${this.iataCode}${flightNumber}`);
+        this.bookings.push({flight: `${this.iataCode}${flightNumber}`, passengerName})
     },
 };
 
@@ -130,4 +131,15 @@ delta.book(239, 'Frank Chance');
 // Frank Chance booked a seat on Delta flight DEL239
 delta.book(635, 'Mike Smith');
 // Mike Smith booked a seat on Delta flight DEL635
+console.log(delta); // displays 'delta' object, including 'bookings' array with 2 bookings listed
+// 0: {flight: "DEL239", passengerName: "Frank Chance"}
+// 1: {flight: "DEL635", passengerName: "Mike Smith"}
+
+const deltawings = {
+    name: 'Deltawings',
+    iataCode: 'DW',
+    bookings: [],
+};
+
+const book = delta.book;
 
