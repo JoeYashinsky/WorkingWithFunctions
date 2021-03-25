@@ -66,6 +66,7 @@ newPassport(joe);
 checkIn(flight, joe);  //  Wrong passport! Since the # was just altered
 */
 
+/*
 const oneWord = function(str) {
     return str.replace(/ /g, '').toLowerCase();
 }
@@ -114,4 +115,13 @@ greeting('Hello')('Ricky');  //  Hello, Ricky.
 const greetArrowFunc = greetingMessage => name => console.log(`${greetingMessage} ${name}`);
 
 greetArrowFunc('Welcome,') ('Cooper.'); // Welcome, Cooper.
+*/
 
+const delta = {
+    airline: 'Delta',
+    iataCode: 'DEL',
+    bookings: [],
+    book(flightNumber, passengerName) {
+        console.log(`${passengerName} booked a seat on ${this.airline} flight ${this.iataCode}${flightNumber}`);
+    },
+};
