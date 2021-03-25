@@ -125,3 +125,9 @@ const delta = {
         console.log(`${passengerName} booked a seat on ${this.airline} flight ${this.iataCode}${flightNumber}`);
     },
 };
+
+delta.book(239, 'Frank Chance');
+// Frank Chance booked a seat on Delta flight DEL239
+delta.book(635, 'Mike Smith');
+// Mike Smith booked a seat on Delta flight DEL635
+
