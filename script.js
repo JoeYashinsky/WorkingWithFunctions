@@ -176,3 +176,9 @@ console.log(swiss);
 
 book.call(swiss, ...flightData);
 // George Cooper booked a seat on Swiss Airlines flight LX583
+
+// Bind Method
+// book.call(deltawings, 23, 'Jack Taylor');
+
+const bookDW = book.bind(deltawings); // 'this' keyword assigned to deltawings
+bookDW(23, 'Bob Williams');
