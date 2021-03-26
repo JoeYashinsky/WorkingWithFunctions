@@ -182,3 +182,6 @@ book.call(swiss, ...flightData);
 
 const bookDW = book.bind(deltawings); // 'this' keyword assigned to deltawings
 bookDW(23, 'Bob Williams');
+// Bob Williams booked a seat on Deltawings flight DW23
+const bookDEL = book.bind(delta);
+const bookLX = book.bind(swiss);
