@@ -117,6 +117,7 @@ const greetArrowFunc = greetingMessage => name => console.log(`${greetingMessage
 greetArrowFunc('Welcome,') ('Cooper.'); // Welcome, Cooper.
 */
 
+/*
 const delta = {
     airline: 'Delta',
     iataCode: 'DEL',
@@ -208,3 +209,47 @@ document
     console.log(addTax(0.1, 200));  //  220
 
     const addVAT = addTax.bind(null, 0.23);
+    // same as   addVAT = value => value + value * 0.23;
+    // null applies to the 'this' keyword
+
+    console.log(addVAT(100));  //  123
+    console.log(addVAT(200));  //  246
+
+    const addTaxRate = function(rate) {
+        return function(value) {
+            return value + value * rate;
+        }
+    }
+    const addVAT2 = addTaxRate(0.23);
+    console.log(addVAT2(100));  // 123
+    console.log(addVAT2(200));  // 246
+    */
+
+    //  Coding Challenge # 1
+    /* Building a simple polling app
+
+    This poll will have  question, an array of options from which to choose, and an array with the number of replies for each option. This data is stored in the starter object (below).
+
+    1. Create a method called 'registerNewAnswer' on the 'poll' object. The method will do two things:  Display a prompt window for the user to input the number of their selected option. The prompt will look like this:
+            What is your favorite programming language?
+            0: JavaScript
+            1: Python
+            2: C#
+            3: C++
+            (Write your option number)
+
+    2. Based on the input number, update the answers array. For example, if the option chosen is # 3, increase the value AT POSITION 3 of the array by 1. Make sure to check if the input is a number and if the number makes sense (answer 52 would not make sense in this case).
+    3. Call this method whenever the user clicks the "Answer poll" button.
+    4. Create a method 'displayResults' which displays the poll results. The method takes a string as an input (called 'type'), which can be either 'string' or 'array'. If the type is 'array', simply display the results array as it is, using  console.log(). This should be the default option. If the type is 'string', display a string like "Poll results are 13, 2, 4, 1".
+    5. Run the 'displayResults' method at the end of each 'registerNewAnswer' method call.
+    BONUS: Use the 'displayResults method to display the 2 arrays in the test data. Use both the 'array' and 'string' options. DON'T put the arrays in the poll object. What should the 'this' keyword look like in this situation?
+
+    BONUS TEST DATA 1: [5, 2, 3]
+    BONUS TEST DATA 2: [1, 5, 3, 9, 6, 1]
+    */
+
+    const poll = {
+        question: 'What is your favorite programming language?',
+        options: ['0: JavaScript', '1: Python', '2: C#', '3: C++'],
+        answers: new Array(4).fill(0),
+    };
