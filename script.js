@@ -202,3 +202,7 @@ document
     .querySelector('.buy')
     .addEventListener('click', delta.buyPlane.bind(delta));
     // 'this' keyword now points to 'delta' object
+
+    // Partial application
+    const addTax = (rate, value) => value + value * rate;
+    console.log(addTax(0.1, 200));  //  220
