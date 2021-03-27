@@ -185,3 +185,7 @@ bookDW(23, 'Bob Williams');
 // Bob Williams booked a seat on Deltawings flight DW23
 const bookDEL = book.bind(delta);
 const bookLX = book.bind(swiss);
+
+const bookDW23 = book.bind(deltawings, 23);
+bookDW23('Joe Tinker'); // Joe Tinker booked a seat on Deltawings flight DW23
+bookDW23('Frank Chance'); // Frank Chance booked a seat on Deltawings flight DW23
