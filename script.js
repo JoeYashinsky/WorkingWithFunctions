@@ -189,3 +189,16 @@ const bookLX = book.bind(swiss);
 const bookDW23 = book.bind(deltawings, 23);
 bookDW23('Joe Tinker'); // Joe Tinker booked a seat on Deltawings flight DW23
 bookDW23('Frank Chance'); // Frank Chance booked a seat on Deltawings flight DW23
+
+// With Event Listeners
+delta.planes = 300;
+delta.buyPlane = function() {
+    console.log(this);
+
+    this.planes++;
+    console.log(this.planes);
+}
+document
+    .querySelector('.buy')
+    .addEventListener('click', delta.buyPlane.bind(delta));
+    // 'this' keyword now points to 'delta' object
