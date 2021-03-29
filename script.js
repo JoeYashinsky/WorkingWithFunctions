@@ -296,7 +296,7 @@ poll.displayResults.call({ answers: [5, 2, 3] }, 'string');
 // Immediately Invoked Function Expressions (IIFE)
 // Function that is used once, and then never again.
 
-const runThisOnce = function () {
+/*const runThisOnce = function () {
   console.log('This function will not run again');
 };
 runThisOnce();
@@ -307,3 +307,15 @@ runThisOnce();
 })();
 
 (() => console.log('This will ALSO NOT RUN AGAIN'))();
+*/
+
+const secureBooking = function() {
+    let passengerCount = 0;
+
+    return function() {
+        passengerCount++;
+        console.log(`${passengerCount} passengers`);
+    }
+}
+
+const booker = secureBooking();
