@@ -253,6 +253,12 @@ document
         options: ['0: JavaScript', '1: Python', '2: C#', '3: C++'],
         answers: new Array(4).fill(0),
         registerNewAnswer() {
+            // Get the answer
             const answer = Number(prompt(`${this.question}\n${this.options.join('\n')}\n(Write option number)`));
+            console.log(answer);
+
+            // Register the answer
+            typeof answer === 'number' && answer < this.answers.length && this.answers[answer]++;
         },
     };
+    // poll.registerNewAnswer();
