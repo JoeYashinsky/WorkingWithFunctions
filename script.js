@@ -225,8 +225,8 @@ document
     console.log(addVAT2(200));  // 246
     */
 
-    //  Coding Challenge # 1
-    /* Building a simple polling app
+//  Coding Challenge # 1
+/* Building a simple polling app
 
     This poll will have  question, an array of options from which to choose, and an array with the number of replies for each option. This data is stored in the starter object (below).
 
@@ -248,17 +248,29 @@ document
     BONUS TEST DATA 2: [1, 5, 3, 9, 6, 1]
     */
 
-    const poll = {
-        question: 'What is your favorite programming language?',
-        options: ['0: JavaScript', '1: Python', '2: C#', '3: C++'],
-        answers: new Array(4).fill(0),
-        registerNewAnswer() {
-            // Get the answer
-            const answer = Number(prompt(`${this.question}\n${this.options.join('\n')}\n(Write option number)`));
-            console.log(answer);
+const poll = {
+  question: 'What is your favorite programming language?',
+  options: ['0: JavaScript', '1: Python', '2: C#', '3: C++'],
+  answers: new Array(4).fill(0),
+  registerNewAnswer() {
+    // Get the answer
+    const answer = Number(
+      prompt(
+        `${this.question}\n${this.options.join('\n')}\n(Write option number)`
+      )
+    );
+    console.log(answer);
 
-            // Register the answer
-            typeof answer === 'number' && answer < this.answers.length && this.answers[answer]++;
-        },
-    };
-    // poll.registerNewAnswer();
+    // Register the answer
+    typeof answer === 'number' &&
+      answer < this.answers.length &&
+      this.answers[answer]++;
+
+    console.log(this.answers);
+  },
+};
+// poll.registerNewAnswer();
+
+document
+  .querySelector('.poll')
+  .addEventListener('click', poll.registerNewAnswer.bind(poll));
