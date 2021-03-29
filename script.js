@@ -285,10 +285,10 @@ document
   .querySelector('.poll')
   .addEventListener('click', poll.registerNewAnswer.bind(poll));
 
-  poll.displayResults.call({ answers: [5, 2, 3] });
-  //  (3) [5, 2, 3]
-  poll.displayResults.call({ answers: [5, 2, 3]}, 'string');
-  //  Poll results are 5, 2, 3
+poll.displayResults.call({ answers: [5, 2, 3] });
+//  (3) [5, 2, 3]
+poll.displayResults.call({ answers: [5, 2, 3] }, 'string');
+//  Poll results are 5, 2, 3
 
 //   BONUS TEST DATA 1: [5, 2, 3]
 //   BONUS TEST DATA 2: [1, 5, 3, 9, 6, 1]
@@ -296,7 +296,12 @@ document
 // Immediately Invoked Function Expressions (IIFE)
 // Function that is used once, and then never again.
 
-const runThisOnce = function() {
-    console.log('This function will not run again');
+const runThisOnce = function () {
+  console.log('This function will not run again');
 };
 runThisOnce();
+
+// This function is called right here, inside the block. So it is an IIFE.
+(function () {
+  console.log('This function will not run again');
+})();
