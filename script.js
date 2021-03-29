@@ -301,7 +301,9 @@ const runThisOnce = function () {
 };
 runThisOnce();
 
-// This function is called right here, inside the block. So it is an IIFE.
+// IIFE     This function is called right here, inside the block.
 (function () {
   console.log('This function will not run again');
 })();
+
+(() => console.log('This will ALSO NOT RUN AGAIN'))();
