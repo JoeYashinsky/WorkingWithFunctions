@@ -309,13 +309,17 @@ runThisOnce();
 (() => console.log('This will ALSO NOT RUN AGAIN'))();
 */
 
-const secureBooking = function() {
-    let passengerCount = 0;
+const secureBooking = function () {
+  let passengerCount = 0;
 
-    return function() {
-        passengerCount++;
-        console.log(`${passengerCount} passengers`);
-    }
-}
+  return function () {
+    passengerCount++;
+    console.log(`${passengerCount} passengers`);
+  };
+};
 
 const booker = secureBooking();
+
+booker();
+booker();
+booker();
