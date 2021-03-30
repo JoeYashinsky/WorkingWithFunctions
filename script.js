@@ -309,6 +309,7 @@ runThisOnce();
 (() => console.log('This will ALSO NOT RUN AGAIN'))();
 */
 
+/*
 const secureBooking = function () {
   let passengerCount = 0;
 
@@ -325,3 +326,27 @@ booker();
 booker();
 
 console.dir(booker);  // f anonymous()
+*/
+
+let f;
+const g = function () {
+  const a = 23;
+  f = function () {
+    console.log(a * 2);
+  };
+};
+
+const h = function () {
+  const b = 777;
+  f = function () {
+    console.log(b * 2);
+  };
+};
+
+g();
+f(); // 46
+
+// Reassigning the f-function
+h();
+f(); // 1554
+console.dir(f);  // f f()
