@@ -349,4 +349,20 @@ f(); // 46
 // Reassigning the f-function
 h();
 f(); // 1554
-console.dir(f);  // f f()
+console.dir(f); // f f()
+
+const boardPassengers = function (n, waitTime) {
+  const perGroup = n / 3;
+
+  setTimeout(function () {
+    console.log(`We are now boarding all ${n} passengers`);
+    console.log(`There are 3 groups, each with ${perGroup} passengers`);
+  }, waitTime * 1000);
+
+  console.log(`Will start boarding in ${waitTime} seconds`);
+};
+
+boardPassengers(180, 3);
+// Will start boarding in 3 seconds
+// We are now boarding all 180 passengers
+// There are 3 groups, each with 60 passengers
