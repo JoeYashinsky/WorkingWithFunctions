@@ -328,6 +328,7 @@ booker();
 console.dir(booker);  // f anonymous()
 */
 
+/*
 let f;
 const g = function () {
   const a = 23;
@@ -366,3 +367,11 @@ boardPassengers(180, 3);
 // Will start boarding in 3 seconds
 // We are now boarding all 180 passengers
 // There are 3 groups, each with 60 passengers
+*/
+
+// Take the IIFE given at the end of the function and attach an event listener that changes the color of the selected h1 element ('header') to blue each time that the BODY element is clicked. Don't select the h1 element again.
+
+(function () {
+    const header = document.querySelector('h1');
+    header.style.color = 'red';
+})();
